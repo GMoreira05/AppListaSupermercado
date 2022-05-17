@@ -2,6 +2,9 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using AppListaSupermercado.Helper;
+using System.IO;
+
 namespace AppListaSupermercado
 {
     public partial class App : Application
@@ -10,7 +13,7 @@ namespace AppListaSupermercado
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new View.ListaProdutos());
         }
 
         protected override void OnStart()

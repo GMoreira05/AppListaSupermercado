@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppListaSupermercado.View.FormularioCadastro">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Inserir novo produto à lista"
+                       FontSize="Large"
+                       Padding="0, 25, 0, 20"
+                       HorizontalOptions="CenterAndExpand" />
+
+            <Entry x:Name="Descricao" Placeholder="Nome do Produto" />
+            <Entry x:Name="Quantidade" Placeholder="Quantidade" Keyboard="Numeric" />
+            <Entry x:Name="ValorEstimado" Placeholder="Valor Estimado" Keyboard="Numeric" />
+
+            <Button x:Name="Btn_AddProduto" Clicked="Btn_AddProduto_Clicked" Text="Adicionar" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
