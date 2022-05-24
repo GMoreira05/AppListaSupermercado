@@ -27,9 +27,9 @@ namespace AppListaSupermercado.View
                 Descricao = txt_descricao.Text,
                 Quantidade = Convert.ToDouble(txt_quantidade.Text),
                 ValorEstimado = Convert.ToDouble(txt_valor_estimado.Text),
-                TotalEstimado = Convert.ToDouble(txt_total_estimado.Text),
+                TotalEstimado = Convert.ToDouble(txt_valor_estimado.Text) * Convert.ToDouble(txt_quantidade.Text),
                 ValorReal = Convert.ToDouble(txt_valor_real.Text),
-                TotalReal = Convert.ToDouble(txt_total_real.Text),
+                TotalReal = Convert.ToDouble(txt_valor_real.Text) * Convert.ToDouble(txt_quantidade.Text),
                 Comprado = chk_comprado.IsChecked
             };
 
