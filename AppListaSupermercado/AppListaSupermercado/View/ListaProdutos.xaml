@@ -17,7 +17,48 @@
                        Padding="0, 25, 0, 20"
                        HorizontalOptions="CenterAndExpand" />
 
-                
+                <RefreshView x:Name="atualizando" IsRefreshing="True">
+
+                    <ListView x:Name="lista_produtos" ItemSelected="lista_produtos_ItemSelected">
+                        <ListView.Header>
+                            <Grid RowDefinitions="Auto"
+                                  ColumnDefinitions="*,*,*">
+                                <Label Grid.Row="0" Grid.Column="0" Text="ID" />
+                                <Label Grid.Row="0" Grid.Column="1" Text="Produto" />
+                                <Label Grid.Row="0" Grid.Column="2" Text="Quantidade" />
+                                <Label Grid.Row="0" Grid.Column="3" Text="Valor Estimado Un." />
+                                <Label Grid.Row="0" Grid.Column="4" Text="Valor Pago Un." />
+                                <Label Grid.Row="0" Grid.Column="5" Text="Valor Total Pago" />
+                                <Label Grid.Row="0" Grid.Column="6" Text="Comprado" />
+                            </Grid>
+                        </ListView.Header>
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.ContextActions>
+                                        <MenuItem Text="Remover" x:Name="Btn_Remover" Clicked="Btn_Remover_Clicked" />
+                                    </ViewCell.ContextActions>
+
+                                    <Grid RowDefinitions="Auto" 
+                                          ColumnDefinitions="*,*,*">
+
+                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding Id}" />
+                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding Descricao}" />
+                                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding Quantidade}" />
+                                        <Label Grid.Row="0" Grid.Column="3" Text="{Binding ValorEstimado}" />
+                                        <Label Grid.Row="0" Grid.Column="3" Text="{Binding ValorTotalEstimado}" />
+                                        <Label Grid.Row="0" Grid.Column="4" Text="{Binding ValorReal}" />
+                                        <Label Grid.Row="0" Grid.Column="5" Text="{Binding ValorTotalReal}" />
+                                        <Label Grid.Row="0" Grid.Column="6" Text="{Binding Comprado}" />
+
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </RefreshView>
+
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

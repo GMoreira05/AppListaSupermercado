@@ -10,9 +10,9 @@
                        Padding="0, 25, 0, 20"
                        HorizontalOptions="CenterAndExpand" />
 
-            <Entry x:Name="Descricao" Placeholder="Nome do Produto" />
-            <Entry x:Name="Quantidade" Placeholder="Quantidade" Keyboard="Numeric" />
-            <Entry x:Name="ValorEstimado" Placeholder="Valor Estimado" Keyboard="Numeric" />
+            <Entry x:Name="txt_Descricao" Placeholder="Nome do Produto" />
+            <Entry x:Name="txt_Quantidade" Placeholder="Quantidade" Keyboard="Numeric" />
+            <Entry x:Name="txt_ValorEstimado" Placeholder="Valor Estimado" Keyboard="Numeric" />
 
             <Button x:Name="Btn_AddProduto" Clicked="Btn_AddProduto_Clicked" Text="Adicionar" />
 
