@@ -35,7 +35,7 @@ namespace AppListaSupermercado.Helper
 
         public Task<List<Produto>> Update(Produto p)
         {
-            string SQL = "UPDATE Atividade SET Descricao = ?, Quantidade = ?, ValorEstimado = ?, TotalEstimado = ?, ValorReal = ?, TotalReal = ?, Comprado = ? WHERE Id = ?";
+            string SQL = "UPDATE Produto SET Descricao = ?, Quantidade = ?, ValorEstimado = ?, TotalEstimado = ?, ValorReal = ?, TotalReal = ?, Comprado = ? WHERE Id = ?";
 
             return _db.QueryAsync<Produto>(SQL,
                 p.Descricao,
