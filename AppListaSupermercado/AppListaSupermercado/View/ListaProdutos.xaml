@@ -26,10 +26,11 @@
                                 <Label Grid.Row="0" Grid.Column="0" Text="ID" />
                                 <Label Grid.Row="0" Grid.Column="1" Text="Produto" />
                                 <Label Grid.Row="0" Grid.Column="2" Text="Quantidade" />
-                                <Label Grid.Row="0" Grid.Column="3" Text="Valor Estimado Un." />
-                                <Label Grid.Row="0" Grid.Column="4" Text="Valor Pago Un." />
-                                <Label Grid.Row="0" Grid.Column="5" Text="Valor Total Pago" />
-                                <Label Grid.Row="0" Grid.Column="6" Text="Comprado" />
+                                <!--<Label Grid.Row="0" Grid.Column="3" Text="Valor Estimado Un." />
+                                <Label Grid.Row="0" Grid.Column="4" Text="Total Estimado" />
+                                <Label Grid.Row="0" Grid.Column="5" Text="Valor Pago Un." />
+                                <Label Grid.Row="0" Grid.Column="6" Text="Total Pago" />-->
+                                <Label Grid.Row="0" Grid.Column="3" Text="Comprado" />
                             </Grid>
                         </ListView.Header>
 
@@ -46,11 +47,11 @@
                                         <Label Grid.Row="0" Grid.Column="0" Text="{Binding Id}" />
                                         <Label Grid.Row="0" Grid.Column="1" Text="{Binding Descricao}" />
                                         <Label Grid.Row="0" Grid.Column="2" Text="{Binding Quantidade}" />
-                                        <Label Grid.Row="0" Grid.Column="3" Text="{Binding ValorEstimado}" />
-                                        <Label Grid.Row="0" Grid.Column="3" Text="{Binding ValorTotalEstimado}" />
-                                        <Label Grid.Row="0" Grid.Column="4" Text="{Binding ValorReal}" />
-                                        <Label Grid.Row="0" Grid.Column="5" Text="{Binding ValorTotalReal}" />
-                                        <Label Grid.Row="0" Grid.Column="6" Text="{Binding Comprado}" />
+                                        <!--<Label Grid.Row="0" Grid.Column="3" Text="{Binding ValorEstimado}" />
+                                        <Label Grid.Row="0" Grid.Column="4" Text="{Binding TotalEstimado}" />
+                                        <Label Grid.Row="0" Grid.Column="5" Text="{Binding ValorReal}" />
+                                        <Label Grid.Row="0" Grid.Column="6" Text="{Binding TotalReal}" />-->
+                                        <Label Grid.Row="0" Grid.Column="3" Text="{Binding Comprado}" />
 
                                     </Grid>
                                 </ViewCell>
