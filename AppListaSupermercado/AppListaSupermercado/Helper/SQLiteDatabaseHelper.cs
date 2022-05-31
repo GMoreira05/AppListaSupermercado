@@ -48,6 +48,15 @@ namespace AppListaSupermercado.Helper
                 p.Id);
         }
 
+        public Task<List<Produto>> UpdateComprado(Produto p)
+        {
+            string SQL = "UPDATE Produto SET Comprado = ? WHERE Id = ?";
+
+            return _db.QueryAsync<Produto>(SQL,
+                p.Comprado,
+                p.Id);
+        }
+
         public Task<int> Delete(int id)
         {
             return _db.Table<Produto>().DeleteAsync(i => i.Id == id);

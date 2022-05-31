@@ -84,5 +84,15 @@ namespace AppListaSupermercado.View
                 BindingContext = produto_selecionado
             });
         }
+
+        private async void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            CheckBox item_clicado = (CheckBox)sender;
+
+            Produto produto_selecionado = (Produto)item_clicado.BindingContext;
+            produto_selecionado.Comprado = !produto_selecionado.Comprado;
+
+            await App.Database.UpdateComprado(produto_selecionado);
+        }
     }
 }
