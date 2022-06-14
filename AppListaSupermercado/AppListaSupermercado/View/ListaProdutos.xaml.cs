@@ -14,6 +14,8 @@ namespace AppListaSupermercado.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ListaProdutos : ContentPage
     {
+        ObservableCollection<Produto> produtos = new ObservableCollection<Produto>();
+
         public ListaProdutos()
         {
             InitializeComponent();
@@ -21,21 +23,23 @@ namespace AppListaSupermercado.View
 
         protected override void OnAppearing()
         {
-            ObservableCollection<Produto> produtos = new ObservableCollection<Produto>();
-
-            System.Threading.Tasks.Task.Run(async () =>
+            if(produtos.Count == 0)
             {
-                List<Produto> temp = await App.Database.GetAllRows();
-
-                foreach (Produto item in temp)
+                System.Threading.Tasks.Task.Run(async () =>
                 {
-                    produtos.Add(item);
-                }
+                    List<Produto> temp = await App.Database.GetAllRows();
 
-                atualizando.IsRefreshing = false;
-            });
+                    foreach (Produto item in temp)
+                    {
+                        produtos.Add(item);
+                    }
 
-            lista_produtos.ItemsSource = produtos;
+                    atualizando.IsRefreshing = false;
+                });
+
+                lista_produtos.ItemsSource = produtos;
+            }        
+            
         }
 
         // Método que é acionado quando clica no botão de "Novo"
@@ -87,12 +91,19 @@ namespace AppListaSupermercado.View
 
         private async void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            CheckBox item_clicado = (CheckBox)sender;
+            try
+            {
+                CheckBox item_clicado = (CheckBox)sender;
 
-            Produto produto_selecionado = (Produto)item_clicado.BindingContext;
-            produto_selecionado.Comprado = !produto_selecionado.Comprado;
+                Produto produto_selecionado = (Produto)item_clicado.BindingContext;
 
-            await App.Database.UpdateComprado(produto_selecionado);
+                await App.Database.UpdateComprado(produto_selecionado);
+
+            }catch (Exception ex)
+            {
+                await DisplayAlert("Erro", ex.Message, "Ok");
+            }
+            
         }
     }
 }

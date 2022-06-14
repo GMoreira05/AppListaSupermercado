@@ -15,6 +15,23 @@ namespace AppListaSupermercado.Model
         public double TotalEstimado { get; set; }
         public double? ValorReal { get; set; }
         public double? TotalReal { get; set; }
-        public bool Comprado { get; set; }
+
+
+        private int _comprado;
+
+        public int Comprado 
+        { 
+            get
+            {
+                return _comprado;
+               //return (_comprado == 0) ? false : true;
+            }
+
+            set
+            {
+                _comprado = value;
+               // _comprado = (value = 0) ? false : true;
+            }
+        }
     }
 }

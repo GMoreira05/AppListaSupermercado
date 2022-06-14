@@ -21,6 +21,8 @@ namespace AppListaSupermercado.View
 
         private async void Btn_Salvar_Clicked(object sender, EventArgs e)
         {
+            int comprado = (chk_comprado.IsChecked) ? 1 : 0;
+
             Produto p = new Produto
             {
                 Id = Convert.ToInt16(lbl_id.Text),
@@ -30,7 +32,7 @@ namespace AppListaSupermercado.View
                 TotalEstimado = Convert.ToDouble(txt_valor_estimado.Text) * Convert.ToDouble(txt_quantidade.Text),
                 ValorReal = Convert.ToDouble(txt_valor_real.Text),
                 TotalReal = Convert.ToDouble(txt_valor_real.Text) * Convert.ToDouble(txt_quantidade.Text),
-                Comprado = chk_comprado.IsChecked
+                Comprado = comprado
             };
 
             await App.Database.Update(p);
