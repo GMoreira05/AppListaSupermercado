@@ -105,5 +105,30 @@ namespace AppListaSupermercado.View
             }
             
         }
+
+        private void atualizando_Refreshing(object sender, EventArgs e)
+        {
+            try
+            {
+                produtos.Clear();
+                System.Threading.Tasks.Task.Run(async () =>
+                {
+                    List<Produto> temp = await App.Database.GetAllRows();
+
+                    foreach (Produto item in temp)
+                    {
+                        produtos.Add(item);
+                    }
+
+                    atualizando.IsRefreshing = false;
+                });
+
+                lista_produtos.ItemsSource = produtos;
+            }
+            catch (Exception ex)
+            {
+                //DisplayAlert("Erro", ex.Message, "Ok");
+            }
+        }
     }
 }
