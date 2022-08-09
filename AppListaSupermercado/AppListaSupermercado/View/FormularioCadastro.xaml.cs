@@ -26,7 +26,6 @@ namespace AppListaSupermercado.View
             p.Descricao = txt_Descricao.Text;
             p.ValorEstimado = Convert.ToDouble(txt_ValorEstimado.Text);
             p.Quantidade = Convert.ToDouble(txt_Quantidade.Text);
-            p.TotalEstimado = Convert.ToDouble(txt_ValorEstimado.Text) * Convert.ToDouble(txt_Quantidade.Text);
             p.Comprado = 1;
 
             await App.Database.Insert(p);

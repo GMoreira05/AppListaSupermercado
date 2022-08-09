@@ -19,6 +19,8 @@ namespace AppListaSupermercado.View
         public ListaProdutos()
         {
             InitializeComponent();
+
+            lista_produtos.ItemsSource = produtos;
         }
 
         protected override void OnAppearing()
@@ -110,10 +112,11 @@ namespace AppListaSupermercado.View
         {
             try
             {
-                produtos.Clear();
                 System.Threading.Tasks.Task.Run(async () =>
                 {
                     List<Produto> temp = await App.Database.GetAllRows();
+
+                    produtos.Clear();
 
                     foreach (Produto item in temp)
                     {
@@ -122,13 +125,37 @@ namespace AppListaSupermercado.View
 
                     atualizando.IsRefreshing = false;
                 });
-
-                lista_produtos.ItemsSource = produtos;
             }
             catch (Exception ex)
             {
-                //DisplayAlert("Erro", ex.Message, "Ok");
+                DisplayAlert("Erro", ex.Message, "Ok");
             }
+        }
+
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                string busca = e.NewTextValue;
+
+                System.Threading.Tasks.Task.Run(async () =>
+                {
+                    List<Produto> temp = await App.Database.Search(busca);
+
+                    produtos.Clear();
+
+                    foreach (Produto item in temp)
+                    {
+                        produtos.Add(item);
+                    }
+
+                    atualizando.IsRefreshing = false;
+                });
+            }catch(Exception ex)
+            {
+                DisplayAlert("Erro", ex.Message, "Ok");
+            }
+            
         }
     }
 }

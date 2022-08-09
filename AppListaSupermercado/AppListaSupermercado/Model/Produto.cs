@@ -12,9 +12,9 @@ namespace AppListaSupermercado.Model
         public string Descricao { get; set; }
         public double Quantidade { get; set; }
         public double ValorEstimado { get; set; }
-        public double TotalEstimado { get; set; }
+        public double TotalEstimado { get => Quantidade * ValorEstimado; }
         public double? ValorReal { get; set; }
-        public double? TotalReal { get; set; }
+        public double? TotalReal { get => Quantidade * ValorReal; }
 
 
         private int _comprado;

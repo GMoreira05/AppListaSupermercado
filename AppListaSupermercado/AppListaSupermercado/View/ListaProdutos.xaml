@@ -12,12 +12,8 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <!-- Segunda opção do padding é encima e quarta é embaixo -->
-                <Label Text="Lista de Compras"
-                       FontSize="Large"
-                       Padding="0, 25, 0, 20"
-                       HorizontalOptions="CenterAndExpand" />
 
+                <SearchBar Placeholder="Pesquisar Produto" x:Name="SearchBar" TextChanged="SearchBar_TextChanged" />
                 <RefreshView x:Name="atualizando" IsRefreshing="True" Refreshing="atualizando_Refreshing">
 
                     <ListView x:Name="lista_produtos" ItemSelected="lista_produtos_ItemSelected">
