@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppListaSupermercado.UWP", "AppListaSupermercado\AppListaSupermercado.UWP\AppListaSupermercado.UWP.csproj", "{FB938268-FA9C-4AB8-BD10-E06F413D43CD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppListaSupermercado.Android", "AppListaSupermercado\AppListaSupermercado.Android\AppListaSupermercado.Android.csproj", "{982ECA99-2FDD-461F-B593-3B3ADB4BC994}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppListaSupermercado.iOS", "AppListaSupermercado\AppListaSupermercado.iOS\AppListaSupermercado.iOS.csproj", "{438A81FF-A9D9-4BE2-BA87-5CDC93C71415}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppListaSupermercado", "AppListaSupermercado\AppListaSupermercado\AppListaSupermercado.csproj", "{A9ADC1E3-1223-4336-A28B-72C452FA9CB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppListaSupermercado", "AppListaSupermercado\AppListaSupermercado\AppListaSupermercado.csproj", "{A9ADC1E3-1223-4336-A28B-72C452FA9CB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,42 +25,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|Any CPU.Build.0 = Debug|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|Any CPU.Deploy.0 = Debug|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|ARM.ActiveCfg = Debug|ARM
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|ARM.Build.0 = Debug|ARM
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|ARM.Deploy.0 = Debug|ARM
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|iPhone.ActiveCfg = Debug|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|iPhone.Build.0 = Debug|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|iPhone.Deploy.0 = Debug|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|iPhoneSimulator.ActiveCfg = Debug|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|iPhoneSimulator.Build.0 = Debug|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|iPhoneSimulator.Deploy.0 = Debug|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|x64.ActiveCfg = Debug|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|x64.Build.0 = Debug|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|x64.Deploy.0 = Debug|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|x86.ActiveCfg = Debug|x86
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|x86.Build.0 = Debug|x86
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Debug|x86.Deploy.0 = Debug|x86
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|Any CPU.ActiveCfg = Release|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|Any CPU.Build.0 = Release|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|Any CPU.Deploy.0 = Release|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|ARM.ActiveCfg = Release|ARM
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|ARM.Build.0 = Release|ARM
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|ARM.Deploy.0 = Release|ARM
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|iPhone.ActiveCfg = Release|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|iPhone.Build.0 = Release|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|iPhone.Deploy.0 = Release|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|iPhoneSimulator.ActiveCfg = Release|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|iPhoneSimulator.Build.0 = Release|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|iPhoneSimulator.Deploy.0 = Release|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|x64.ActiveCfg = Release|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|x64.Build.0 = Release|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|x64.Deploy.0 = Release|x64
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|x86.ActiveCfg = Release|x86
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|x86.Build.0 = Release|x86
-		{FB938268-FA9C-4AB8-BD10-E06F413D43CD}.Release|x86.Deploy.0 = Release|x86
 		{982ECA99-2FDD-461F-B593-3B3ADB4BC994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{982ECA99-2FDD-461F-B593-3B3ADB4BC994}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{982ECA99-2FDD-461F-B593-3B3ADB4BC994}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
