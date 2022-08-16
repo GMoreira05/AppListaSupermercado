@@ -25,7 +25,7 @@
                                 <Label Grid.Row="0" Grid.Column="2" Text="Quantidade" />
                                 <Label Grid.Row="0" Grid.Column="3" Text="Comprado" />
                             </Grid>
-                        </ListView.Header>
+                        </ListView.Header>  
 
                         <ListView.ItemTemplate>
                             <DataTemplate>
