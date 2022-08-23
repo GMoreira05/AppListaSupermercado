@@ -112,11 +112,18 @@ namespace AppListaSupermercado.View
         {
             try
             {
+               // Console.WriteLine("Chamou para atualizar.");
+
+
                 System.Threading.Tasks.Task.Run(async () =>
                 {
+                    //Console.WriteLine("Dentro da Thread");
+
                     List<Produto> temp = await App.Database.GetAllRows();
 
-                    produtos.Clear();
+                    //Console.WriteLine("Retornou do SQlite = " + temp.Count);
+
+                    produtos = new ObservableCollection<Produto>();
 
                     foreach (Produto item in temp)
                     {
@@ -128,7 +135,7 @@ namespace AppListaSupermercado.View
             }
             catch (Exception ex)
             {
-                DisplayAlert("Erro", ex.Message, "Ok");
+                DisplayAlert("Erro aqui", ex.Message, "Ok");
             }
         }
 
