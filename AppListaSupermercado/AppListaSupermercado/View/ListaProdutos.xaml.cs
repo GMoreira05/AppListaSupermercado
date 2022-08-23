@@ -143,19 +143,19 @@ namespace AppListaSupermercado.View
         {
             try
             {
+                atualizando.IsRefreshing = true;
                 string busca = e.NewTextValue;
 
                 System.Threading.Tasks.Task.Run(async () =>
                 {
                     List<Produto> temp = await App.Database.Search(busca);
 
-                    produtos.Clear();
+                    produtos = new ObservableCollection<Produto>();
 
                     foreach (Produto item in temp)
                     {
                         produtos.Add(item);
                     }
-
                     atualizando.IsRefreshing = false;
                 });
             }catch(Exception ex)
